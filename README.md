@@ -68,18 +68,32 @@ L’objectiu del projecte és crear una aplicació web híbrida (*Single Page Ap
 ## Estructura del projecte
 
 ```text
-snapparty/
+edicionLimitada/
 │
-├── public/                # Fitxers estàtics per al CDN
-│   ├── index.html
-│   └── js/
-│       ├── app.js         # Lògica de renderitzat (Fetch GET)
-│       └── components.js  # Component <upload-button> (Canvas + Fetch POST)
-├── api/                   # Serverless Functions
-│   ├── photos.js          # GET: Llista els objectes del bucket S3/R2
-│   └── upload.js          # POST: Puja el blob rebut directament al bucket
-├── vercel.json / wrangler.toml  # Configuració de la plataforma Serverless
+├── css/
+│   ├── header.css          # Estils de la portada i zona de pujada
+│   ├── galeria.css         # Estils de la graella de fotos (CSS Grid)
+│   ├── lightbox.css        # Estils de la Popover API (pantalla completa)
+│   └── styles.css          # Variables CSS globals i estils de base
+│
+├── data/                   # Destinat a les imatges reals de la prova
+│   └── fotos-cumple/       # Aquí hi aniran les fotos tractades que ella t'enviï
+│
+├── docs/                   # La teva documentació del projecte
+│   └── requisitsFase2.md   # El document que acabem de tancar
+│
+├── js/
+│   ├── app.js              # Inicialitzador global i orquestrador
+│   ├── galeria.js          # Lògica de renderitzat asíncron de la graella
+│   └── uploadSim.js        # Web Component del botó de pujada (mode simulació)
+│
+├── json/
+│   └── photosMock.json     # El llistat d'estat local (simulant el bucket)
+│
+├── index.html              # SPA principal (punt d'entrada)
+├── package.json
 └── README.md
+
 ```
 
 ## Gestió de dades
