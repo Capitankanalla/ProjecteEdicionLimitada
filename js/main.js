@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
 async function initApp(lang) {
   try {
     // 1. Petición asíncrona para obtener los TEXTOS del diccionario (Evita textos duros)
-    const langResponse = await fetch('./json/lang.json');
+    const langResponse = await fetch('./js/json/lang.json');
     const translations = await langResponse.json();
     const texts = translations[lang];
 
     // 2. Petición asíncrona para obtener el MAPA DE FOTOS del JSON (Simula la API S3/R2)
-    const photosResponse = await fetch('./json/photos.json');
+    const photosResponse = await fetch('./js/json/photos.json');
     const photosMockArray = await photosResponse.json();
 
     // 3. Hidratación/Inyección de textos en los nodos semánticos del HTML
