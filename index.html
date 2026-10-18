@@ -8,26 +8,28 @@
 </head>
 <body>
 
+  <!-- HERO: Exclusivament per a la capçalera del cartell de la festa -->
   <header id="heroSection">
-    <div class="hero-banner">
-      <img src="./data/capcalera-cartell.png" id="heroImg" alt=""><!-- Alt dinàmic -->
-    </div>
-    
-    <div id="uploadControlZone">
-      <button id="uploadBtn"><!-- Dinàmic --></button>
-      <p id="uploadStatusMsg"><!-- Dinàmic --></p>
-    </div>
+    <img src="./data/capçaleraCartell.webp" id="heroImg" alt=""><!-- Sense subcarpetes inventades -->
+    <div class="shooting-star"></div>
+
   </header>
 
+  <!-- CONTROLS: Zona del botó de pujada i estat, independent de l'Hero -->
+  <section id="uploadControlZone">
+    <button id="uploadBtn"><!-- Dinàmic --></button>
+    <p id="uploadStatusMsg"><!-- Dinàmic --></p>
+  </section>
+
+  <!-- GALERIA: La graella de fotografies de la cumpleañera -->
   <main>
     <div id="galleryGrid">
-      <!-- Les fotos s'injectaran aquí -->
+      <!-- Les fotos s'injectaran aquí dinàmicament des de photos.json -->
     </div>
   </main>
 
-  <footer id="mainFooter">
-    <!-- El text del peu s'injectarà aquí o via html/footer.html -->
-  </footer>
+  <!-- FOOTER: El peu modular -->
+  <footer id="mainFooter"></footer>
 
   <script src="./js/main.js"></script>
 </body>
