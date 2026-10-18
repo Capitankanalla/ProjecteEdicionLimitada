@@ -113,6 +113,16 @@ S3_ENDPOINT=https://<account-id>.r2.cloudflarestorage.com
 S3_ACCESS_KEY_ID=el_teu_access_key
 S3_SECRET_ACCESS_KEY=el_teu_secret_key
 S3_BUCKET_NAME=snapparty-festa
+
+### Fases del projecte i calendari associat:
+
+• Fase 1 (Completada): Definició del projecte "Edición Limitada" i abast conceptual a falta d'aquest calendari.
+• Fase 2 (Següent): Recollida de dades i requisits.
+• Fase 3: Estructurar el projecte.
+• Fase 4: Establir processos o milestones (organització del tauler).
+• Fase 5: Provar i tornar a recollir dades i requeriments (el test del MVP amb les fotos de les vacances).
+• Fase 6: Corregir o modificar el projecte respecte a l'inicial.
+
 ```
 
 ### Executar entorn local Serverless
