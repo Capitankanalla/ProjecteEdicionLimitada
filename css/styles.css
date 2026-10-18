@@ -1,0 +1,193 @@
+/* css/styles.css */
+
+/* ==========================================================================
+   1. VARIABLES GLOBALS I IDENTITAT (SYNTHWAVE / RETROWAVE)
+   ========================================================================== */
+:root {
+  /* Paleta de colors extreta del cartell */
+  --bg-deep: #050508;          /* Negre espacial profund */
+  --text-light: #f3f4f6;       /* Blanc grisenc per a text llegible */
+  --text-muted: #9ca3af;       /* Gris per a secundaris */
+  
+  /* Neons elèctrics */
+  --neon-pink: #ff007f;        /* Rosa elèctric de la capçalera */
+  --neon-cyan: #00f0ff;        /* Blau cian dels textos inferiors */
+  --neon-purple: #9d4edd;      /* Lila de les ombres de text */
+  
+  /* Grid i espaiats */
+  --gap-grid: 12px;            /* Separació neta per a la galeria mòbil */
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   2. RESETS I CONFIGURACIÓ DE BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-deep);
+  color: var(--text-light);
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 5rem; /* Espai per no trepitjar el footer fixat */
+  
+  /* EFECTE ESTRELLES NATEU: Generat combinant gradients radials repetits */
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+}
+
+/* ==========================================================================
+   3. HERO / PORTADA (SECCIO CAPÇALERA)
+   ========================================================================== */
+#heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero-banner {
+  max-width: 100%;
+  width: 450px; /* Mida ideal optimitzada per a pantalles mòbils */
+  margin-bottom: 2rem;
+}
+
+#heroImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Resplendor suau lila per integrar el retall del cartell amb el fons d'estrelles */
+  filter: drop-shadow(0 0 15px rgba(157, 78, 221, 0.6)); 
+}
+
+/* ==========================================================================
+   4. ZONA DE CONTROL (BOTÓ DE PUJADA)
+   ========================================================================== */
+#uploadControlZone {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+#uploadBtn {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--neon-pink);
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  /* EFECTE NEÓ ROSA: Ombra interna i externa amb el color del cartell */
+  box-shadow: 
+    0 0 10px var(--neon-pink),
+    inset 0 0 5px var(--neon-pink);
+  text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-pink);
+}
+
+#uploadBtn:hover, #uploadBtn:active {
+  background: var(--neon-pink);
+  color: #000;
+  box-shadow: 0 0 25px var(--neon-pink);
+  text-shadow: none;
+}
+
+#uploadStatusMsg {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  font-family: monospace;
+  text-shadow: 0 0 4px rgba(0, 240, 255, 0.4);
+}
+
+/* ==========================================================================
+   5. GALERIA D'IMATGES (CSS GRID DINÀMIC)
+   ========================================================================== */
+main {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+#galleryGrid {
+  display: grid;
+  /* REQUISIT MOBILE-FIRST: 3 columnes compactes de base al mòbil */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--gap-grid);
+}
+
+/* Element botó que conté cada foto de la graella */
+.photo-item {
+  aspect-ratio: 1 / 1; /* Forcem format quadrat a la quadrícula per a l'ordre visual */
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #111;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.photo-item:hover, .photo-item:focus {
+  border-color: var(--neon-cyan);
+  outline: none;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Respecta l'enquadrament de la imatge sense deformar-la */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.photo-item:hover img {
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   6. PEU DE PÀGINA MODULAR (FOOTER)
+   ========================================================================== */
+#mainFooter {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 3rem;
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (ADAPTACIÓ PER A PANTALLES GRANS)
+   ========================================================================== */
+@media (min-width: 640px) {
+  #galleryGrid {
+    /* Ampliem la mida de la cel·la a tauletes/escriptori per veure detalls */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  
+  #heroSection {
+    padding: 4rem 2rem 3rem 2rem;
+  }
+  
+  .hero-banner {
+    width: 550px;
+  }
+}

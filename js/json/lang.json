@@ -1,0 +1,23 @@
+{
+  "ca": {
+    "title": "Edición Limitada 🥂",
+    "heroAlt": "Cartell oficial de la festa 1976 Edición Limitada",
+    "uploadBtn": "📸 Pujar fotos de la festa",
+    "uploadStatusMsgReady": "Sistema a punt per rebre les teves imatges.",
+    "uploadStatusMsgUploading": "Processant, comprimint i enviant imatges a alta velocitat...",
+    "uploadStatusMsgSuccess": "¡Totes les fotos s'han pujat correctament! 🎉",
+    "downloadText": "Descarregar foto original",
+    "footerText": "Projecte Edición Limitada — Desenvolupat amb Vanilla JS i Serverless"
+  },
+  "es": {
+    "title": "Edición Limitada 🥂",
+    "heroAlt": "Cartel oficial de la fiesta 1976 Edición Limitada",
+    "uploadBtn": "📸 Subir fotos de la fiesta",
+    "uploadStatusMsgReady": "Sistema listo para recibir tus imágenes.",
+    "uploadStatusMsgUploading": "Procesando, comprimiendo y enviando imágenes a alta velocidad...",
+    "uploadStatusMsgSuccess": "¡Todas las fotos se han subido correctamente! 🎉",
+    "downloadText": "Descargar foto original",
+    "footerText": "Proyecto Edición Limitada — Desarrollado con Vanilla JS y Serverless"
+  }
+  
+}
