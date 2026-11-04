@@ -36,20 +36,17 @@ body {
    HERO: Capçalera d'alta amplada amb vora neó blau cian clar
    ========================================================================== */
 #heroSection {
-  width: 94vw;
-  max-width: none;            /* Aprofita gairebé tota la pantalla disponible */
-  margin: 2rem auto 3rem auto; /* Més aire a sota per separar-lo netament dels controls */
+  width: min(94vw, 1400px);
+  margin: 2rem auto 3rem;
   display: flex;
   justify-content: center;
 }
-
 #heroImg {
-  width: 100%;
-  height: clamp(160px, 28vw, 400px);
-  object-fit: cover;
-  object-position: center;
-  max-width: none;          /* Evita que es deformi en pantalles de sobretaula gegants */
   display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+
   
   /* REQUISIT: Vora neta de 2px en blau cian clar */
   border: 2px solid var(--neon-cyan);
