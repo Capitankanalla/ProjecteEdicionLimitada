@@ -36,7 +36,7 @@ body {
    HERO: Capçalera d'alta amplada amb vora neó blau cian clar
    ========================================================================== */
 #heroSection {
-  width: min(94vw, 1400px);
+  width: 80%;
   margin: 2rem auto 3rem;
   display: flex;
   justify-content: center;
