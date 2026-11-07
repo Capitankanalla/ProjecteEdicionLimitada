@@ -108,3 +108,41 @@ function setupUploadSimulation(msgUploading, msgSuccess) {
     }, 2500); // Demora simulada de 2.5 segundos
   });
 }
+
+/*==========================================================================
+   EFECTE: ESTEL FUGAÇ RETROWAVE (CSS PURE)
+   ==========================================================================*/
+const starCount = 6;
+
+const originalStar = document.querySelector('.shooting-star');
+
+const starPositions = [
+  { x: 12, y: 0.08 },
+  { x: 75, y: 0.15 },
+  { x: 28, y: 0.30 },
+  { x: 88, y: 0.42 },
+  { x: 8,  y: 0.55 },
+  { x: 55, y: 0.68 },
+  { x: 20, y: 0.82 },
+  { x: 80, y: 0.94 }
+];
+
+const pageHeight = document.documentElement.scrollHeight;
+
+for (let i = 0; i < starCount; i++) {
+  const star = i === 0
+    ? originalStar
+    : originalStar.cloneNode(true);
+
+  if (i > 0) {
+    document.body.appendChild(star);
+  } else {
+    document.body.appendChild(originalStar);
+  }
+
+  star.style.position = 'absolute';
+  star.style.left = `${starPositions[i].x}%`;
+  star.style.top = `${pageHeight * starPositions[i].y}px`;
+
+  star.style.animationDelay = `${i * 2.3}s`;
+}

@@ -156,7 +156,7 @@ main {
    ========================================================================== */
 /* ESTEL FUGAÇ RETROWAVE */
 .shooting-star {
-  position: fixed;
+  position: absolute;
   top: 10%;
   left: 65%;
   width: 6px;
@@ -173,7 +173,7 @@ main {
     0 0 22px var(--neon-cyan),
     0 0 35px var(--neon-purple);
 
-  animation: flyAndGlow 15s linear infinite;
+  animation: flyAndGlow 7s linear infinite;
 }
 
 .shooting-star::after {
@@ -197,17 +197,17 @@ main {
 }
 
 @keyframes flyAndGlow {
-  0%, 80% {
+  0%, 65% {
     transform: translate(0, 0) rotate(-45deg) scale(0);
     opacity: 0;
   }
 
-  81% {
+  68% {
     transform: translate(0, 0) rotate(-45deg) scale(1);
     opacity: 1;
   }
 
-  84% {
+  85% {
     transform: translate(-300px, 300px) rotate(-45deg) scale(0.3);
     opacity: 0;
   }
