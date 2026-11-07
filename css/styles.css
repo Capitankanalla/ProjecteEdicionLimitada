@@ -154,44 +154,65 @@ main {
 /* ==========================================================================
    EFECTE: ESTEL FUGAÇ RETROWAVE (CSS PURE)
    ========================================================================== */
+/* ESTEL FUGAÇ RETROWAVE */
 .shooting-star {
   position: fixed;
-  top: 0;
-  left: 50%; /* Comença a mitja pantalla per no molestar l'Hero */
-  width: 4px;
-  height: 4px;
+  top: 10%;
+  left: 65%;
+  width: 6px;
+  height: 6px;
   background: #fff;
   border-radius: 50%;
   opacity: 0;
-  pointer-events: none; /* Evita que interfereixi amb els clics dels botons */
-  z-index: -1;          /* Queda per sota de la galeria i de l'Hero */
-  
-  /* Cua de l'estel combinant els tons de la festa (Cian i Lila) */
-  box-shadow: 
-    0 0 10px #fff,
-    -10px -10px 20px var(--neon-cyan),
-    -30px -30px 40px var(--neon-purple);
-    
-  /* Animació infinita: dura 3 segons i es repeteix cada 12 segons */
+  pointer-events: none;
+  z-index: 100;
+
+  box-shadow:
+    0 0 5px #fff,
+    0 0 12px #fff,
+    0 0 22px var(--neon-cyan),
+    0 0 35px var(--neon-purple);
+
   animation: flyAndGlow 15s linear infinite;
 }
 
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 3px;
+  right: 2px;
+  top: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-purple),
+    var(--neon-cyan),
+    #fff
+  );
+
+  transform: translateX(100%);
+  filter: blur(1px);
+}
+
 @keyframes flyAndGlow {
-  0% {
+  0%, 80% {
     transform: translate(0, 0) rotate(-45deg) scale(0);
     opacity: 0;
   }
-  1% {
-    opacity: 1;
+
+  81% {
     transform: translate(0, 0) rotate(-45deg) scale(1);
+    opacity: 1;
   }
-  3% {
-    /* Creua en diagonal cap a l'esquerra i es va difuminant */
-    transform: translate(-300px, 300px) rotate(-45deg) scale(0.2);
+
+  84% {
+    transform: translate(-300px, 300px) rotate(-45deg) scale(0.3);
     opacity: 0;
   }
+
   100% {
-    /* Es queda invisible durant la resta del cicle fins a la propera passada */
     transform: translate(-300px, 300px) rotate(-45deg) scale(0);
     opacity: 0;
   }
