@@ -7,7 +7,7 @@
     "uploadStatusMsgUploading": "Processant, comprimint i enviant imatges a alta velocitat...",
     "uploadStatusMsgSuccess": "¡Totes les fotos s'han pujat correctament! 🎉",
     "downloadText": "Descarregar foto original",
-    "footerText": "Projecte Edición Limitada — Desenvolupat amb Vanilla JS i Serverless"
+    "footerText": "\u00A9 Edición Limitada — 2026 by Nano X Tech"
   },
   "es": {
     "title": "Edición Limitada 🥂",
@@ -17,7 +17,7 @@
     "uploadStatusMsgUploading": "Procesando, comprimiendo y enviando imágenes a alta velocidad...",
     "uploadStatusMsgSuccess": "¡Todas las fotos se han subido correctamente! 🎉",
     "downloadText": "Descargar foto original",
-    "footerText": "Proyecto Edición Limitada — Desarrollado con Vanilla JS y Serverless"
+    "footerText": "\u00A9 Edición Limitada — 2026 by Nano X Tech"
   }
   
 }
